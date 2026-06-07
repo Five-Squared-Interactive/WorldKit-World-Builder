@@ -1,0 +1,102 @@
+/**
+ * Recovery Dialog Styles
+ */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.dialog {
+  background: var(--color-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  width: 400px;
+  max-width: 90vw;
+  padding: 24px;
+  text-align: center;
+}
+
+.icon {
+  color: var(--color-warning);
+  margin-bottom: 16px;
+}
+
+.title {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.message {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.timestamp {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  opacity: 0.8;
+}
+
+.error {
+  margin-bottom: 16px;
+  padding: 10px;
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-error);
+  border-radius: 6px;
+  color: var(--color-error);
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.discardButton,
+.recoverButton {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.discardButton {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.discardButton:hover:not(:disabled) {
+  background: var(--color-surface-hover);
+}
+
+.recoverButton {
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: white;
+}
+
+.recoverButton:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.discardButton:disabled,
+.recoverButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

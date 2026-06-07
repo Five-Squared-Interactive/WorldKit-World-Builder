@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<veml version="1.0">
+  <metadata>
+    <title>Test VEML File</title>
+    <description>Test file for file association verification</description>
+  </metadata>
+  <environment>
+    <background type="color" value="#87CEEB"/>
+  </environment>
+  <entities/>
+</veml>

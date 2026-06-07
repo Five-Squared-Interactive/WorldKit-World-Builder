@@ -1,0 +1,84 @@
+/**
+ * WorldKit Design Tokens
+ *
+ * CSS Custom Properties following the UX Design Specification
+ * Dark theme colors and layout dimensions
+ */
+
+:root {
+  /* Colors - Dark Theme */
+  --color-background: #0f0f0f;
+  --color-surface: #1a1a1a;
+  --color-surface-elevated: #242424;
+  --color-border: #333333;
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a3a3a3;
+  --color-text-muted: #525252;
+
+  /* Semantic Colors */
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+  --color-accent-subtle: rgba(59, 130, 246, 0.15);
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-error-bg: rgba(239, 68, 68, 0.1);
+
+  /* Alias Variables (for component compatibility) */
+  --color-text: var(--color-text-primary);
+  --color-bg: var(--color-background);
+  --color-surface-hover: var(--color-surface-elevated);
+  --color-border-hover: #444444;
+  --color-primary: var(--color-accent);
+
+  /* 3D Viewport Colors */
+  --color-grid: rgba(51, 51, 51, 0.5);
+  --color-selection: #3b82f6;
+  --color-gizmo-x: #ef4444;
+  --color-gizmo-y: #22c55e;
+  --color-gizmo-z: #3b82f6;
+  --color-snap-guide: #f59e0b;
+
+  /* Spacing - Base unit: 4px */
+  --space-unit: 4px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Layout Dimensions */
+  --toolbar-height: 48px;
+  --scene-tree-width: 240px;
+  --properties-width: 280px;
+  --asset-library-height: 200px;
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Font Sizes */
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 13px;
+  --text-lg: 14px;
+  --text-xl: 18px;
+  --text-2xl: 24px;
+
+  /* Border Radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* Transitions */
+  --transition-fast: 100ms ease;
+  --transition-normal: 200ms ease;
+  --transition-slow: 300ms ease;
+
+  /* Z-Index Layers */
+  --z-panel: 10;
+  --z-toolbar: 20;
+  --z-modal: 100;
+  --z-toast: 200;
+}

@@ -1,0 +1,8 @@
+# Tray icon placeholder
+# Add the following icon files for production:
+# - tray-icon.png (16x16 or 32x32 for Windows/Linux)
+# - tray-icon@2x.png (32x32 or 64x64 for retina displays)
+# - tray-icon-Template.png (for macOS - black icon, system will color it)
+# - tray-icon-Template@2x.png (macOS retina)
+#
+# The application will use a fallback blue square icon if these are not present.

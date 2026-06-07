@@ -1,0 +1,262 @@
+/**
+ * Scene Tree Styles
+ */
+
+/* Drop zone for asset library drops */
+.dropZone {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100%;
+  transition: background-color 0.15s ease, outline 0.15s ease;
+}
+
+.dragOver {
+  background-color: var(--color-primary-bg, rgba(59, 130, 246, 0.1));
+  outline: 2px dashed var(--color-primary);
+  outline-offset: -2px;
+}
+
+.tree {
+  padding: 4px 0;
+  user-select: none;
+}
+
+.empty {
+  padding: 16px 12px;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.emptyHint {
+  font-size: 12px;
+  margin-top: 4px;
+  opacity: 0.7;
+}
+
+.treeNode {
+  display: flex;
+  flex-direction: column;
+}
+
+.nodeRow {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  gap: 4px;
+  transition: background 0.1s ease;
+}
+
+.nodeRow:hover {
+  background: var(--color-surface-hover);
+}
+
+.nodeRowSelected {
+  background: var(--color-primary);
+  color: white;
+}
+
+.nodeRowSelected:hover {
+  background: var(--color-primary);
+}
+
+.nodeRowSelected .nodeName {
+  color: white;
+}
+
+.nodeRowSelected .icon {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.nodeRowSelected .expandButton {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nodeRowSelected .expandButton:hover {
+  color: white;
+}
+
+.expandButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.expandButton:hover {
+  color: var(--color-text);
+}
+
+.expandButtonExpanded {
+  transform: rotate(90deg);
+}
+
+.expandPlaceholder {
+  width: 16px;
+  flex-shrink: 0;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+}
+
+.iconGroup {
+  color: var(--color-warning);
+}
+
+.iconMesh {
+  color: var(--color-primary);
+}
+
+.iconLight {
+  color: #f0c14b;
+}
+
+.nodeName {
+  flex: 1;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--color-text);
+}
+
+.children {
+  margin-left: 16px;
+}
+
+/* Inline editing styles */
+.nameInput {
+  flex: 1;
+  font-size: 13px;
+  padding: 1px 4px;
+  margin: -2px 0;
+  border: 1px solid var(--color-primary);
+  border-radius: 3px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  outline: none;
+  min-width: 50px;
+}
+
+.nameInput:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-bg);
+}
+
+.nameInputError {
+  border-color: var(--color-error);
+}
+
+.nameInputError:focus {
+  box-shadow: 0 0 0 2px var(--color-error-bg);
+}
+
+/* Drag and drop styles */
+.nodeRowDragging {
+  opacity: 0.5;
+}
+
+.dropIndicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-primary);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.dropIndicatorTop {
+  top: 0;
+}
+
+.dropIndicatorBottom {
+  bottom: 0;
+}
+
+.nodeRowDropTarget {
+  background: var(--color-primary-bg);
+  outline: 2px dashed var(--color-primary);
+  outline-offset: -2px;
+}
+
+/* Context menu styles */
+.contextMenu {
+  position: fixed;
+  z-index: 1000;
+  min-width: 180px;
+  padding: 4px 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.contextMenuItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px;
+  gap: 8px;
+  border: none;
+  background: none;
+  color: var(--color-text);
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s ease;
+}
+
+.contextMenuItem:hover,
+.contextMenuItemFocused {
+  background: var(--color-surface-hover);
+}
+
+.contextMenuItemDisabled {
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+.contextMenuItemDisabled:hover {
+  background: none;
+}
+
+.contextMenuIcon {
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.contextMenuLabel {
+  flex: 1;
+}
+
+.contextMenuShortcut {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  margin-left: 16px;
+}
+
+.contextMenuDivider {
+  height: 1px;
+  margin: 4px 8px;
+  background: var(--color-border);
+}
